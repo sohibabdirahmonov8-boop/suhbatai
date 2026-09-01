@@ -36,29 +36,6 @@ button{
     margin:auto;
     padding:18px 15px 105px;
     position:relative;
-    overflow:hidden;
-}
-
-.glow{
-    position:fixed;
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    filter:blur(110px);
-    opacity:.13;
-    pointer-events:none;
-}
-
-.glow1{
-    background:#7c3aed;
-    right:-130px;
-    top:-100px;
-}
-
-.glow2{
-    background:#2563eb;
-    left:-170px;
-    bottom:50px;
 }
 
 .header{
@@ -82,7 +59,6 @@ button{
     justify-content:center;
     background:linear-gradient(135deg,#9b6cff,#4f46e5);
     font-size:24px;
-    box-shadow:0 10px 30px rgba(124,58,237,.3);
 }
 
 .brand h1{
@@ -99,77 +75,23 @@ button{
     margin-top:3px;
 }
 
-.bell{
-    width:43px;
-    height:43px;
-    border-radius:14px;
-    background:#11111d;
-    border:1px solid #272738;
-    color:#fff;
-    font-size:17px;
-    position:relative;
-}
-
-.bellDot{
-    position:absolute;
-    width:6px;
-    height:6px;
-    right:8px;
-    top:8px;
-    background:#a78bfa;
-    border-radius:50%;
-}
-
-.page{
-    display:none;
-    animation:appear .25s ease;
-}
-
-.page.active{
-    display:block;
-}
-
-@keyframes appear{
-    from{
-        opacity:0;
-        transform:translateY(8px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.status{
+    margin-top:35px;
+    display:inline-block;
+    padding:7px 12px;
+    border-radius:30px;
+    background:#151326;
+    color:#a78bfa;
+    font-size:10px;
 }
 
 .hero{
-    margin-top:42px;
-}
-
-.online{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    padding:7px 11px;
-    border-radius:50px;
-    border:1px solid #29263d;
-    background:rgba(139,92,246,.08);
-    color:#b8a5ec;
-    font-size:9px;
-    font-weight:bold;
-}
-
-.online i{
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:#63e4a6;
-    box-shadow:0 0 10px #63e4a6;
+    margin-top:15px;
 }
 
 .hero h2{
-    margin-top:16px;
     font-size:31px;
     line-height:1.15;
-    letter-spacing:-1px;
 }
 
 .hero h2 span{
@@ -183,284 +105,56 @@ button{
     line-height:1.6;
 }
 
-.limit{
-    margin-top:24px;
-    height:67px;
-    padding:10px 14px;
-    border-radius:19px;
-    border:1px solid #242437;
-    background:rgba(255,255,255,.025);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.limitLeft{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.limitIcon{
-    width:42px;
-    height:42px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(139,92,246,.12);
-}
-
-.limit strong{
-    display:block;
-    font-size:12px;
-}
-
-.limit small{
-    display:block;
-    margin-top:3px;
-    color:#6b6b7e;
-    font-size:9px;
-}
-
-.limitNumber b{
-    color:#a78bfa;
-    font-size:18px;
-}
-
-.limitNumber span{
-    color:#5f5f72;
-    font-size:10px;
-}
-
-.pro{
-    margin-top:12px;
-    padding:14px;
-    min-height:88px;
-    border-radius:21px;
-    border:1px solid rgba(139,92,246,.28);
-    background:
-    radial-gradient(circle at 100% 0%,rgba(124,58,237,.3),transparent 58%),
-    #11101d;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-}
-
-.proLeft{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.proIcon{
-    width:43px;
-    height:43px;
-    border-radius:14px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(139,92,246,.12);
-}
-
-.proLabel{
-    color:#a78bfa;
-    font-size:8px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.pro h3{
-    margin-top:3px;
-    font-size:13px;
-}
-
-.pro p{
-    margin-top:3px;
-    color:#747487;
-    font-size:9px;
-}
-
-.proBtn{
-    padding:10px 11px;
-    border-radius:12px;
-    border:0;
-    color:#fff;
-    background:linear-gradient(135deg,#8b5cf6,#6366f1);
-    font-size:9px;
-    font-weight:bold;
-}
-
-.section{
-    margin:28px 2px 13px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.sectionTitle{
-    display:flex;
-    gap:7px;
-    align-items:center;
-}
-
-.sectionTitle h3{
-    font-size:14px;
-}
-
-.section small{
-    color:#5e5e72;
-    font-size:9px;
-}
-
 .services{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:12px;
+    margin-top:30px;
 }
 
 .service{
-    height:175px;
-    position:relative;
-    overflow:hidden;
+    height:155px;
     padding:15px;
     border-radius:22px;
-    border:1px solid rgba(255,255,255,.07);
+    border:1px solid #29283b;
     color:#fff;
     text-align:left;
-    transition:.2s;
-}
-
-.service:active{
-    transform:scale(.96);
 }
 
 .friend{
-    background:
-    radial-gradient(circle at 100% 0%,#6745dd,transparent 60%),
-    #121021;
+    background:linear-gradient(135deg,#33206e,#121021);
 }
 
 .laugh{
-    background:
-    radial-gradient(circle at 100% 0%,#d44588,transparent 60%),
-    #1a101b;
+    background:linear-gradient(135deg,#682348,#1a101b);
 }
 
 .advice{
-    background:
-    radial-gradient(circle at 100% 0%,#1593a9,transparent 60%),
-    #0e1a20;
+    background:linear-gradient(135deg,#145c68,#0e1a20);
 }
 
 .question{
-    background:
-    radial-gradient(circle at 100% 0%,#18a878,transparent 60%),
-    #0d1917;
-}
-
-.serviceTop{
-    display:flex;
-    justify-content:space-between;
+    background:linear-gradient(135deg,#146b51,#0d1917);
 }
 
 .serviceIcon{
-    width:47px;
-    height:47px;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(255,255,255,.1);
-    font-size:22px;
+    font-size:28px;
 }
 
-.arrow{
-    width:29px;
-    height:29px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(255,255,255,.08);
-}
-
-.serviceText{
-    position:absolute;
-    left:15px;
-    bottom:17px;
-}
-
-.serviceText h3{
+.service h3{
+    margin-top:50px;
     font-size:16px;
 }
 
-.serviceText p{
+.service p{
     margin-top:5px;
-    color:rgba(255,255,255,.53);
+    color:#aaa;
     font-size:9px;
-}
-
-.decor{
-    position:absolute;
-    right:-5px;
-    bottom:-18px;
-    color:rgba(255,255,255,.035);
-    font-size:90px;
-    transform:rotate(-15deg);
-}
-
-.daily{
-    margin-top:14px;
-    padding:13px;
-    border-radius:18px;
-    border:1px solid #222234;
-    background:rgba(255,255,255,.025);
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.dailyIcon{
-    width:40px;
-    height:40px;
-    border-radius:12px;
-    background:rgba(139,92,246,.12);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.dailyContent{
-    flex:1;
-}
-
-.dailyContent span{
-    color:#9982df;
-    font-size:8px;
-    font-weight:bold;
-}
-
-.dailyContent p{
-    color:#9595a8;
-    margin-top:4px;
-    font-size:9px;
-}
-
-.refresh{
-    width:30px;
-    height:30px;
-    border-radius:9px;
-    background:#191827;
-    color:#a78bfa;
-    border:0;
 }
 
 .chat{
     display:none;
-    height:calc(100vh - 115px);
-    min-height:580px;
+    height:calc(100vh - 40px);
     flex-direction:column;
 }
 
@@ -472,18 +166,18 @@ button{
     display:flex;
     align-items:center;
     gap:10px;
-    padding:7px 0 13px;
-    border-bottom:1px solid #202030;
+    padding:8px 0 13px;
+    border-bottom:1px solid #252538;
 }
 
 .back{
-    width:39px;
-    height:39px;
+    width:40px;
+    height:40px;
+    border:0;
     border-radius:12px;
     background:#151522;
     color:#fff;
-    font-size:18px;
-    border:0;
+    font-size:20px;
 }
 
 .chatAvatar{
@@ -502,24 +196,9 @@ button{
 }
 
 .chatTitle p{
-    margin-top:3px;
     color:#6e6e82;
     font-size:9px;
-}
-
-.chatActions{
-    margin-left:auto;
-    display:flex;
-    gap:5px;
-}
-
-.chatActions button{
-    width:34px;
-    height:34px;
-    border-radius:10px;
-    background:#151522;
-    color:#aaaabd;
-    border:0;
+    margin-top:3px;
 }
 
 .messages{
@@ -529,20 +208,19 @@ button{
 }
 
 .message{
-    max-width:84%;
-    padding:11px 13px;
-    margin-bottom:11px;
+    max-width:85%;
+    padding:12px 14px;
+    margin-bottom:12px;
     border-radius:16px;
     font-size:12px;
     line-height:1.5;
     word-wrap:break-word;
-    white-space:pre-wrap;
 }
 
 .bot{
     background:#151522;
     border:1px solid #242437;
-    color:#d2d2df;
+    color:#ddd;
     border-top-left-radius:5px;
 }
 
@@ -552,19 +230,9 @@ button{
     border-top-right-radius:5px;
 }
 
-.messageTools{
-    display:flex;
-    gap:5px;
-    margin-top:5px;
-}
-
-.messageTools button{
-    padding:4px 7px;
-    border-radius:7px;
-    border:1px solid #29293a;
-    background:#11111c;
-    color:#77778a;
-    font-size:8px;
+.typing{
+    color:#888;
+    font-style:italic;
 }
 
 .inputArea{
@@ -575,338 +243,37 @@ button{
 
 .inputArea input{
     flex:1;
-    height:49px;
+    height:50px;
     padding:0 15px;
     border-radius:15px;
     border:1px solid #272738;
     background:#11111d;
-    color:white;
+    color:#fff;
     outline:none;
-    font-size:12px;
-}
-
-.inputArea input:focus{
-    border-color:#6650b2;
 }
 
 .send{
-    width:49px;
+    width:50px;
     border:0;
     border-radius:15px;
     background:linear-gradient(135deg,#8b5cf6,#6366f1);
     color:#fff;
-    font-size:19px;
-}
-
-.inner{
-    padding-top:32px;
-}
-
-.pageTitle{
-    font-size:27px;
-}
-
-.pageSub{
-    color:#77778b;
-    font-size:11px;
-    margin-top:7px;
-    line-height:1.5;
-}
-
-.empty{
-    margin-top:24px;
-    padding:30px 20px;
-    border-radius:21px;
-    border:1px solid #252538;
-    background:#11111d;
-    text-align:center;
-}
-
-.emptyIcon{
-    font-size:42px;
-    margin-bottom:12px;
-}
-
-.empty h3{
-    font-size:15px;
-}
-
-.empty p{
-    margin-top:7px;
-    color:#77778b;
-    font-size:10px;
-    line-height:1.5;
-}
-
-.profile{
-    margin-top:24px;
-    padding:22px;
-    border-radius:22px;
-    border:1px solid #252538;
-    background:#11111d;
-    text-align:center;
-}
-
-.avatar{
-    width:72px;
-    height:72px;
-    margin:auto;
-    border-radius:23px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#8b5cf6,#4f46e5);
-    font-size:31px;
-}
-
-.profile h3{
-    margin-top:12px;
-}
-
-.profile p{
-    margin-top:5px;
-    color:#77778b;
-    font-size:10px;
-}
-
-.profileBtns{
-    display:grid;
-    gap:9px;
-    margin-top:18px;
-}
-
-.profileBtns button{
-    height:46px;
-    border-radius:13px;
-    background:#181825;
-    color:#bbb;
-    text-align:left;
-    padding:0 14px;
-    border:0;
-}
-
-.navbar{
-    position:fixed;
-    z-index:50;
-    bottom:9px;
-    left:50%;
-    transform:translateX(-50%);
-    width:calc(100% - 24px);
-    max-width:496px;
-    height:68px;
-    border-radius:22px;
-    border:1px solid #242437;
-    background:rgba(12,12,22,.94);
-    backdrop-filter:blur(25px);
-    display:flex;
-    align-items:center;
-    justify-content:space-around;
-}
-
-.nav{
-    width:55px;
-    height:55px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:3px;
-    border:0;
-    background:transparent;
-    color:#606073;
-}
-
-.nav span{
     font-size:20px;
 }
 
-.nav small{
-    font-size:8px;
-}
-
-.nav.active{
-    color:#a78bfa;
-}
-
-.add{
-    width:48px;
-    height:48px;
-    border-radius:16px;
-    border:0;
-    background:linear-gradient(135deg,#8b5cf6,#4f46e5);
-    color:#fff;
-    font-size:25px;
-    box-shadow:0 8px 25px rgba(124,58,237,.3);
-}
-
-.modal{
-    position:fixed;
-    z-index:100;
-    inset:0;
-    padding:14px;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    background:rgba(0,0,0,.72);
-    opacity:0;
-    visibility:hidden;
-    transition:.25s;
-}
-
-.modal.show{
-    opacity:1;
-    visibility:visible;
-}
-
-.modalBox{
+.backHome{
+    margin-top:20px;
     width:100%;
-    max-width:500px;
-    padding:23px 18px;
-    border-radius:26px;
-    border:1px solid #302a48;
-    background:
-    radial-gradient(circle at 50% 0%,rgba(124,58,237,.22),transparent 60%),
-    #11101d;
-    transform:translateY(30px);
-    transition:.3s;
-}
-
-.modal.show .modalBox{
-    transform:translateY(0);
-}
-
-.close{
-    float:right;
-    width:32px;
-    height:32px;
-    border-radius:10px;
-    background:#1b1a29;
-    color:#aaaabb;
-    font-size:19px;
+    height:45px;
     border:0;
-}
-
-.modalIcon{
-    width:57px;
-    height:57px;
-    margin:8px auto 12px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(139,92,246,.13);
-    font-size:25px;
-}
-
-.modalBox h2{
-    text-align:center;
-    font-size:21px;
-}
-
-.modalBox p{
-    text-align:center;
-    max-width:310px;
-    margin:8px auto;
-    color:#77778b;
-    font-size:10px;
-    line-height:1.5;
-}
-
-.price{
-    text-align:center;
-    margin:16px 0;
-}
-
-.price strong{
-    font-size:30px;
-}
-
-.price span{
-    color:#9999aa;
-    font-size:10px;
-}
-
-.payment{
-    width:100%;
-    height:52px;
-    margin-top:9px;
-    padding:0 14px;
-    border-radius:14px;
-    border:1px solid #29293b;
-    background:#171724;
-    color:#fff;
-    text-align:left;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.payment span{
-    float:right;
-    color:#77778b;
-}
-
-.toast{
-    position:fixed;
-    z-index:200;
-    left:50%;
-    bottom:91px;
-    transform:translate(-50%,20px);
-    padding:11px 15px;
-    max-width:calc(100% - 40px);
-    border-radius:12px;
-    background:#191827;
-    border:1px solid #302c45;
-    color:#ddddea;
-    font-size:10px;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s;
-}
-
-.toast.show{
-    opacity:1;
-    visibility:visible;
-    transform:translate(-50%,0);
-}
-
-.loading{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
-
-.dot{
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#a78bfa;
-    animation:pulse 1s infinite alternate;
-}
-
-.dot:nth-child(2){
-    animation-delay:.2s;
-}
-
-.dot:nth-child(3){
-    animation-delay:.4s;
-}
-
-@keyframes pulse{
-    from{opacity:.2;transform:translateY(0)}
-    to{opacity:1;transform:translateY(-3px)}
+    border-radius:13px;
+    background:#181825;
+    color:#bbb;
 }
 
 @media(max-width:370px){
     .hero h2{
-        font-size:28px;
-    }
-
-    .service{
-        height:160px;
-    }
-
-    .serviceText h3{
-        font-size:14px;
+        font-size:27px;
     }
 }
 </style>
@@ -915,9 +282,6 @@ button{
 <body>
 
 <div class="app">
-
-<div class="glow glow1"></div>
-<div class="glow glow2"></div>
 
 <header class="header">
 
@@ -930,95 +294,27 @@ button{
 </div>
 </div>
 
-<button class="bell" onclick="notify()">
-🔔
-<span class="bellDot"></span>
-</button>
-
 </header>
 
 
-<section id="home" class="page active">
+<section id="home">
+
+<div class="status">
+● AI ONLINE
+</div>
 
 <div class="hero">
 
-<div class="online">
-<i></i>
-AI ONLINE
-</div>
-
 <h2>
-Salom! 👋
-<br>
-<span>Bugun nima haqida</span>
-<br>
+Salom! 👋<br>
+<span>Bugun nima haqida</span><br>
 gaplashamiz?
 </h2>
 
 <p>
-Suhbatlashing, kuling, maslahat oling
-yoki istalgan savolingizga javob toping.
+Suhbatlashing, savol bering, maslahat oling
+yoki shunchaki suhbatlashing.
 </p>
-
-</div>
-
-
-<div class="limit">
-
-<div class="limitLeft">
-
-<div class="limitIcon">⚡</div>
-
-<div>
-<strong>Bepul limit</strong>
-<small>Bugungi savollar</small>
-</div>
-
-</div>
-
-<div class="limitNumber">
-<b id="limit">5</b>
-<span>/ 5</span>
-</div>
-
-</div>
-
-
-<div class="pro">
-
-<div class="proLeft">
-
-<div class="proIcon">
-⭐
-</div>
-
-<div>
-
-<span class="proLabel">SUHBATAI PRO</span>
-
-<h3>15 kun limitsiz</h3>
-
-<p>Cheklovlarsiz suhbatlashing</p>
-
-</div>
-
-</div>
-
-<button class="proBtn" onclick="openPro()">
-5 200 so‘m →
-</button>
-
-</div>
-
-
-<div class="section">
-
-<div class="sectionTitle">
-<span>✨</span>
-<h3>Suhbat turini tanlang</h3>
-</div>
-
-<small>4 ta xizmat</small>
 
 </div>
 
@@ -1028,17 +324,10 @@ yoki istalgan savolingizga javob toping.
 <button class="service friend"
 onclick="openChat('Do‘st','🧑‍🤝‍🧑')">
 
-<div class="serviceTop">
 <div class="serviceIcon">🧑‍🤝‍🧑</div>
-<div class="arrow">↗</div>
-</div>
 
-<div class="serviceText">
 <h3>Do‘st</h3>
 <p>Bemalol suhbatlashing</p>
-</div>
-
-<div class="decor">💬</div>
 
 </button>
 
@@ -1046,17 +335,10 @@ onclick="openChat('Do‘st','🧑‍🤝‍🧑')">
 <button class="service laugh"
 onclick="openChat('Kulgu','😂')">
 
-<div class="serviceTop">
 <div class="serviceIcon">😂</div>
-<div class="arrow">↗</div>
-</div>
 
-<div class="serviceText">
 <h3>Kulgu</h3>
-<p>Hazil va o‘yinlar</p>
-</div>
-
-<div class="decor">✦</div>
+<p>Hazil va qiziqarli suhbat</p>
 
 </button>
 
@@ -1064,17 +346,10 @@ onclick="openChat('Kulgu','😂')">
 <button class="service advice"
 onclick="openChat('Maslahatchi','💡')">
 
-<div class="serviceTop">
 <div class="serviceIcon">💡</div>
-<div class="arrow">↗</div>
-</div>
 
-<div class="serviceText">
 <h3>Maslahatchi</h3>
-<p>Muammoga yechim toping</p>
-</div>
-
-<div class="decor">✧</div>
+<p>Maslahat va yordam</p>
 
 </button>
 
@@ -1082,38 +357,12 @@ onclick="openChat('Maslahatchi','💡')">
 <button class="service question"
 onclick="openChat('Savol-javob','❓')">
 
-<div class="serviceTop">
 <div class="serviceIcon">❓</div>
-<div class="arrow">↗</div>
-</div>
 
-<div class="serviceText">
 <h3>Savol-javob</h3>
 <p>Istalgan savolingizni bering</p>
-</div>
-
-<div class="decor">?</div>
 
 </button>
-
-</div>
-
-
-<div class="daily">
-
-<div class="dailyIcon">💜</div>
-
-<div class="dailyContent">
-
-<span>BUGUNGI FIKR</span>
-
-<p id="quote">
-“Har bir katta natija kichik qadamdan boshlanadi.”
-</p>
-
-</div>
-
-<button class="refresh" onclick="changeQuote()">↻</button>
 
 </div>
 
@@ -1126,19 +375,15 @@ onclick="openChat('Savol-javob','❓')">
 
 <button class="back" onclick="goHome()">←</button>
 
-<div class="chatAvatar" id="chatAvatar">🤖</div>
+<div class="chatAvatar" id="chatAvatar">
+🤖
+</div>
 
 <div class="chatTitle">
 
 <h3 id="chatName">Do‘st</h3>
 
 <p>AI suhbatdosh • Online</p>
-
-</div>
-
-<div class="chatActions">
-
-<button onclick="clearChat()">🗑</button>
 
 </div>
 
@@ -1157,180 +402,17 @@ placeholder="Xabar yozing..."
 autocomplete="off"
 >
 
-<button class="send" onclick="send()">➤</button>
+<button class="send" onclick="sendMessage()">
+➤
+</button>
 
 </div>
+
+<button class="backHome" onclick="goHome()">
+← Bosh sahifaga qaytish
+</button>
 
 </section>
-
-
-<section id="chats" class="page">
-
-<div class="inner">
-
-<h2 class="pageTitle">Suhbatlar</h2>
-
-<p class="pageSub">
-Oldingi suhbatlaringiz shu yerda.
-</p>
-
-<div class="empty">
-
-<div class="emptyIcon">💬</div>
-
-<h3>Hali suhbatlar yo‘q</h3>
-
-<p>
-Yangi suhbat boshlash uchun
-pastdagi + tugmasini bosing.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="saved" class="page">
-
-<div class="inner">
-
-<h2 class="pageTitle">Saqlangan</h2>
-
-<p class="pageSub">
-Foydali javoblaringiz shu yerda saqlanadi.
-</p>
-
-<div class="empty">
-
-<div class="emptyIcon">⭐</div>
-
-<h3>Saqlanganlar yo‘q</h3>
-
-<p>
-AI javoblarini saqlash uchun
-javob ostidagi ⭐ tugmasidan foydalaning.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="profile" class="page">
-
-<div class="inner">
-
-<h2 class="pageTitle">Profil</h2>
-
-<p class="pageSub">
-SuhbatAI hisobingiz.
-</p>
-
-<div class="profile">
-
-<div class="avatar">👤</div>
-
-<h3>Mehmon</h3>
-
-<p>Bepul foydalanuvchi</p>
-
-<div class="profileBtns">
-
-<button onclick="toast('Profil ma’lumotlari keyingi versiyada.')">
-👤 &nbsp; Profil ma’lumotlari
-</button>
-
-<button onclick="toast('Sozlamalar keyingi versiyada.')">
-⚙️ &nbsp; Sozlamalar
-</button>
-
-<button onclick="openPro()">
-⭐ &nbsp; SuhbatAI Pro
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<nav class="navbar">
-
-<button class="nav active" onclick="showPage('home',this)">
-<span>⌂</span>
-<small>Bosh sahifa</small>
-</button>
-
-<button class="nav" onclick="showPage('chats',this)">
-<span>◉</span>
-<small>Suhbatlar</small>
-</button>
-
-<button class="add" onclick="openChat('Yangi suhbat','🤖')">
-＋
-</button>
-
-<button class="nav" onclick="showPage('saved',this)">
-<span>☆</span>
-<small>Saqlangan</small>
-</button>
-
-<button class="nav" onclick="showPage('profile',this)">
-<span>♙</span>
-<small>Profil</small>
-</button>
-
-</nav>
-
-
-<div class="modal" id="proModal">
-
-<div class="modalBox">
-
-<button class="close" onclick="closePro()">×</button>
-
-<div class="modalIcon">⭐</div>
-
-<h2>SuhbatAI Pro</h2>
-
-<p>
-5 200 so‘m to‘lang va 15 kun davomida
-limitsiz foydalaning.
-</p>
-
-<div class="price">
-<strong>5 200</strong>
-<span>so‘m</span>
-</div>
-
-<button class="payment" onclick="payment('Click')">
-🟢 &nbsp; Click orqali to‘lash
-<span>→</span>
-</button>
-
-<button class="payment" onclick="payment('Payme')">
-🔵 &nbsp; Payme orqali to‘lash
-<span>→</span>
-</button>
-
-<button class="payment" onclick="payment('Boshqa')">
-💳 &nbsp; Boshqa to‘lov usuli
-<span>→</span>
-</button>
-
-</div>
-
-</div>
-
-
-<div class="toast" id="toast"></div>
 
 </div>
 
@@ -1340,195 +422,188 @@ limitsiz foydalaning.
 const API_URL =
 "https://suhbatai-backend-1.onrender.com/chat";
 
-let used = Number(localStorage.getItem("suhbatai_used") || 0);
-
-let pro = localStorage.getItem("suhbatai_pro") === "true";
-
-let currentChat = "";
-
-let quoteIndex = 0;
-
-let chatHistory = [];
-
-updateLimit();
+let currentChat = "Do‘st";
 
 
-function showPage(id,button){
+function openChat(name, emoji){
 
-    document.querySelectorAll(".page")
-    .forEach(x=>x.classList.remove("active"));
+    currentChat = name;
+
+    document.getElementById("home")
+        .style.display = "none";
 
     document.getElementById("chat")
-    .classList.remove("active");
+        .classList.add("active");
 
-    document.getElementById(id)
-    .classList.add("active");
+    document.getElementById("chatName")
+        .textContent = name;
 
-    document.querySelectorAll(".nav")
-    .forEach(x=>x.classList.remove("active"));
+    document.getElementById("chatAvatar")
+        .textContent = emoji;
 
-    if(button){
-        button.classList.add("active");
-    }
-}
+    document.getElementById("messages")
+        .innerHTML = "";
 
-
-function openChat(name,emoji){
-
-    if(!pro && used>=5){
-
-        openPro();
-
-        toast("Bugungi 5 ta savol limitiga yetdingiz ⭐");
-
-        return;
-    }
-
-    currentChat=name;
-
-    document.getElementById("chatName").textContent=name;
-
-    document.getElementById("chatAvatar").textContent=emoji;
-
-    document.querySelectorAll(".page")
-    .forEach(x=>x.classList.remove("active"));
-
-    document.getElementById("chat").classList.add("active");
-
-    document.getElementById("messages").innerHTML="";
-
-    chatHistory=[];
-
-    addBot(welcome(name));
+    addBot(
+        "😊 Salom! Men SuhbatAI. " +
+        "Menga istalgan savolingizni yozishingiz mumkin."
+    );
 
     document.getElementById("input").focus();
 }
 
 
-function welcome(name){
+function goHome(){
 
-    if(name==="Kulgu"){
-        return "😂 Salom! Kayfiyatni ko‘taramizmi? Istalgan mavzuda gaplashamiz.";
-    }
+    document.getElementById("chat")
+        .classList.remove("active");
 
-    if(name==="Maslahatchi"){
-        return "💡 Salom! Vaziyatingizni yozing. Imkon qadar foydali va ehtiyotkor maslahat beraman.";
-    }
-
-    if(name==="Savol-javob"){
-        return "❓ Salom! Savolingizni yozing. Men imkon qadar aniq va tushunarli javob beraman.";
-    }
-
-    return "😊 Salom! Men SuhbatAI. Bemalol yozing, suhbatlashamiz.";
+    document.getElementById("home")
+        .style.display = "block";
 }
 
 
-async function send(){
+function addUser(text){
 
-    const input=document.getElementById("input");
+    const box =
+        document.getElementById("messages");
 
-    const text=input.value.trim();
+    const msg =
+        document.createElement("div");
+
+    msg.className = "message user";
+
+    msg.textContent = text;
+
+    box.appendChild(msg);
+
+    box.scrollTop = box.scrollHeight;
+}
+
+
+function addBot(text){
+
+    const box =
+        document.getElementById("messages");
+
+    const msg =
+        document.createElement("div");
+
+    msg.className = "message bot";
+
+    msg.textContent = text;
+
+    box.appendChild(msg);
+
+    box.scrollTop = box.scrollHeight;
+}
+
+
+function showTyping(){
+
+    const box =
+        document.getElementById("messages");
+
+    const msg =
+        document.createElement("div");
+
+    msg.id = "typing";
+
+    msg.className = "message bot typing";
+
+    msg.textContent = "AI yozmoqda...";
+
+    box.appendChild(msg);
+
+    box.scrollTop = box.scrollHeight;
+}
+
+
+function removeTyping(){
+
+    const typing =
+        document.getElementById("typing");
+
+    if(typing){
+        typing.remove();
+    }
+}
+
+
+async function sendMessage(){
+
+    const input =
+        document.getElementById("input");
+
+    const text =
+        input.value.trim();
 
     if(!text){
         return;
     }
 
-    if(!pro && used>=5){
-
-        openPro();
-
-        toast("Bepul limit tugadi ⭐");
-
-        return;
-    }
-
-    input.value="";
 
     addUser(text);
 
-    if(!pro){
+    input.value = "";
 
-        used++;
+    showTyping();
 
-        localStorage.setItem(
-            "suhbatai_used",
-            used
-        );
-
-        updateLimit();
-    }
-
-    const loading=document.createElement("div");
-
-    loading.className="message bot";
-
-    loading.id="loadingMessage";
-
-    loading.innerHTML=`
-        <div class="loading">
-            <span>AI yozmoqda</span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    `;
-
-    const box=document.getElementById("messages");
-
-    box.appendChild(loading);
-
-    box.scrollTop=box.scrollHeight;
 
     try{
 
-        const response=await fetch(API_URL,{
+        const response =
+            await fetch(API_URL,{
 
-            method:"POST",
+                method:"POST",
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+                headers:{
+                    "Content-Type":
+                    "application/json"
+                },
 
-            body:JSON.stringify({
-                message:
-                `Suhbat turi: ${currentChat}
+                body:JSON.stringify({
+                    message:text
+                })
 
-Foydalanuvchi:
-${text}`
-            })
+            });
 
-        });
 
-        let data;
+        const data =
+            await response.json();
 
-        try{
-            data=await response.json();
-        }catch{
-            data={};
-        }
 
-        document.getElementById("loadingMessage")?.remove();
+        removeTyping();
+
 
         if(!response.ok){
 
-            throw new Error(
-                data.error ||
-                "Server javobida xatolik yuz berdi."
+            addBot(
+                "❌ AI server xatolik qaytardi."
             );
+
+            console.error(data);
+
+            return;
         }
 
-        if(!data.answer){
 
-            throw new Error(
-                "AI javobi kelmadi."
+        if(data.answer){
+
+            addBot(data.answer);
+
+        }else{
+
+            addBot(
+                "❌ AI javob qaytarmadi."
             );
+
         }
 
-        addBot(data.answer);
 
     }catch(error){
 
-        document.getElementById("loadingMessage")?.remove();
+        removeTyping();
 
         console.error(error);
 
@@ -1542,235 +617,11 @@ ${text}`
 }
 
 
-function addUser(text){
-
-    const box=document.getElementById("messages");
-
-    const msg=document.createElement("div");
-
-    msg.className="message user";
-
-    msg.textContent=text;
-
-    box.appendChild(msg);
-
-    box.scrollTop=box.scrollHeight;
-}
-
-
-function addBot(text){
-
-    const box=document.getElementById("messages");
-
-    const wrapper=document.createElement("div");
-
-    const msg=document.createElement("div");
-
-    msg.className="message bot";
-
-    msg.textContent=text;
-
-    wrapper.appendChild(msg);
-
-    const tools=document.createElement("div");
-
-    tools.className="messageTools";
-
-    const copy=document.createElement("button");
-
-    copy.textContent="📋 Nusxalash";
-
-    copy.onclick=async()=>{
-
-        try{
-
-            await navigator.clipboard.writeText(text);
-
-            toast("Javob nusxalandi 📋");
-
-        }catch{
-
-            toast("Nusxalash amalga oshmadi");
-
-        }
-
-    };
-
-
-    const save=document.createElement("button");
-
-    save.textContent="⭐ Saqlash";
-
-    save.onclick=()=>{
-
-        const saved =
-        JSON.parse(
-            localStorage.getItem("suhbatai_saved") || "[]"
-        );
-
-        saved.push({
-            text:text,
-            date:new Date().toISOString()
-        });
-
-        localStorage.setItem(
-            "suhbatai_saved",
-            JSON.stringify(saved)
-        );
-
-        toast("Javob saqlandi ⭐");
-
-    };
-
-
-    tools.appendChild(copy);
-
-    tools.appendChild(save);
-
-    wrapper.appendChild(tools);
-
-    box.appendChild(wrapper);
-
-    box.scrollTop=box.scrollHeight;
-}
-
-
-function updateLimit(){
-
-    const remaining=
-        pro ? "∞" : Math.max(0,5-used);
-
-    document.getElementById("limit")
-    .textContent=remaining;
-}
-
-
-function clearChat(){
-
-    if(!confirm("Ushbu suhbatni tozalaysizmi?")){
-        return;
-    }
-
-    document.getElementById("messages")
-    .innerHTML="";
-
-    chatHistory=[];
-
-    addBot(welcome(currentChat));
-
-    toast("Suhbat tozalandi 🗑");
-}
-
-
-function goHome(){
-
-    document.getElementById("chat")
-    .classList.remove("active");
-
-    document.getElementById("home")
-    .classList.add("active");
-
-    document.querySelectorAll(".nav")
-    .forEach(x=>x.classList.remove("active"));
-
-    document.querySelector(".nav")
-    .classList.add("active");
-}
-
-
-function openPro(){
-
-    document.getElementById("proModal")
-    .classList.add("show");
-}
-
-
-function closePro(){
-
-    document.getElementById("proModal")
-    .classList.remove("show");
-}
-
-
-function payment(method){
-
-    closePro();
-
-    toast(
-        method+
-        " to‘lovi keyingi bosqichda ulanadi 💳"
-    );
-}
-
-
-function notify(){
-
-    toast("Hozircha yangi bildirishnoma yo‘q 🔔");
-}
-
-
-const quotes=[
-
-"Har bir katta natija kichik qadamdan boshlanadi.",
-
-"Savol berish — o‘rganishning boshlanishi.",
-
-"Bugun kechagidan yaxshiroq bo‘lishga harakat qiling.",
-
-"Yaxshi suhbat yaxshi kayfiyat yaratadi."
-
-];
-
-
-function changeQuote(){
-
-    quoteIndex++;
-
-    if(quoteIndex>=quotes.length){
-        quoteIndex=0;
-    }
-
-    document.getElementById("quote")
-    .textContent=
-    "“"+quotes[quoteIndex]+"”";
-}
-
-
-let toastTimer;
-
-function toast(text){
-
-    const box=document.getElementById("toast");
-
-    box.textContent=text;
-
-    box.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer=setTimeout(()=>{
-
-        box.classList.remove("show");
-
-    },2500);
-}
-
-
 document.getElementById("input")
 .addEventListener("keydown",function(e){
 
-    if(e.key==="Enter"){
-        send();
-    }
-
-});
-
-
-document.getElementById("proModal")
-.addEventListener("click",function(e){
-
-    if(e.target===this){
-        closePro();
+    if(e.key === "Enter"){
+        sendMessage();
     }
 
 });
@@ -1778,4 +629,4 @@ document.getElementById("proModal")
 </script>
 
 </body>
-</html>
+    </html>
