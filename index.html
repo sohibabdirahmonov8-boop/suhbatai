@@ -454,6 +454,7 @@ button{
     border-radius:9px;
     background:#191827;
     color:#a78bfa;
+    border:0;
 }
 
 .chat{
@@ -482,6 +483,7 @@ button{
     background:#151522;
     color:#fff;
     font-size:18px;
+    border:0;
 }
 
 .chatAvatar{
@@ -534,6 +536,7 @@ button{
     font-size:12px;
     line-height:1.5;
     word-wrap:break-word;
+    white-space:pre-wrap;
 }
 
 .bot{
@@ -729,10 +732,10 @@ button{
     width:48px;
     height:48px;
     border-radius:16px;
+    border:0;
     background:linear-gradient(135deg,#8b5cf6,#4f46e5);
     color:#fff;
     font-size:25px;
-    border:0;
     box-shadow:0 8px 25px rgba(124,58,237,.3);
 }
 
@@ -866,6 +869,33 @@ button{
     transform:translate(-50%,0);
 }
 
+.loading{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.dot{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#a78bfa;
+    animation:pulse 1s infinite alternate;
+}
+
+.dot:nth-child(2){
+    animation-delay:.2s;
+}
+
+.dot:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes pulse{
+    from{opacity:.2;transform:translateY(0)}
+    to{opacity:1;transform:translateY(-3px)}
+}
+
 @media(max-width:370px){
     .hero h2{
         font-size:28px;
@@ -907,6 +937,7 @@ button{
 
 </header>
 
+
 <section id="home" class="page active">
 
 <div class="hero">
@@ -931,6 +962,7 @@ yoki istalgan savolingizga javob toping.
 
 </div>
 
+
 <div class="limit">
 
 <div class="limitLeft">
@@ -951,6 +983,7 @@ yoki istalgan savolingizga javob toping.
 
 </div>
 
+
 <div class="pro">
 
 <div class="proLeft">
@@ -961,9 +994,7 @@ yoki istalgan savolingizga javob toping.
 
 <div>
 
-<span class="proLabel">
-SUHBATAI PRO
-</span>
+<span class="proLabel">SUHBATAI PRO</span>
 
 <h3>15 kun limitsiz</h3>
 
@@ -979,6 +1010,7 @@ SUHBATAI PRO
 
 </div>
 
+
 <div class="section">
 
 <div class="sectionTitle">
@@ -989,6 +1021,7 @@ SUHBATAI PRO
 <small>4 ta xizmat</small>
 
 </div>
+
 
 <div class="services">
 
@@ -1009,6 +1042,7 @@ onclick="openChat('Do‘st','🧑‍🤝‍🧑')">
 
 </button>
 
+
 <button class="service laugh"
 onclick="openChat('Kulgu','😂')">
 
@@ -1026,6 +1060,7 @@ onclick="openChat('Kulgu','😂')">
 
 </button>
 
+
 <button class="service advice"
 onclick="openChat('Maslahatchi','💡')">
 
@@ -1042,6 +1077,7 @@ onclick="openChat('Maslahatchi','💡')">
 <div class="decor">✧</div>
 
 </button>
+
 
 <button class="service question"
 onclick="openChat('Savol-javob','❓')">
@@ -1062,6 +1098,7 @@ onclick="openChat('Savol-javob','❓')">
 
 </div>
 
+
 <div class="daily">
 
 <div class="dailyIcon">💜</div>
@@ -1081,6 +1118,7 @@ onclick="openChat('Savol-javob','❓')">
 </div>
 
 </section>
+
 
 <section id="chat" class="chat">
 
@@ -1106,7 +1144,9 @@ onclick="openChat('Savol-javob','❓')">
 
 </div>
 
+
 <div class="messages" id="messages"></div>
+
 
 <div class="inputArea">
 
@@ -1122,6 +1162,7 @@ autocomplete="off"
 </div>
 
 </section>
+
 
 <section id="chats" class="page">
 
@@ -1150,6 +1191,7 @@ pastdagi + tugmasini bosing.
 
 </section>
 
+
 <section id="saved" class="page">
 
 <div class="inner">
@@ -1167,7 +1209,8 @@ Foydali javoblaringiz shu yerda saqlanadi.
 <h3>Saqlanganlar yo‘q</h3>
 
 <p>
-Foydali javoblarni saqlash imkoniyati mavjud.
+AI javoblarini saqlash uchun
+javob ostidagi ⭐ tugmasidan foydalaning.
 </p>
 
 </div>
@@ -1175,6 +1218,7 @@ Foydali javoblarni saqlash imkoniyati mavjud.
 </div>
 
 </section>
+
 
 <section id="profile" class="page">
 
@@ -1192,15 +1236,15 @@ SuhbatAI hisobingiz.
 
 <h3>Mehmon</h3>
 
-<p id="profileStatus">Bepul foydalanuvchi</p>
+<p>Bepul foydalanuvchi</p>
 
 <div class="profileBtns">
 
-<button onclick="toast('Profil tizimi keyingi versiyada ishlaydi 👤')">
+<button onclick="toast('Profil ma’lumotlari keyingi versiyada.')">
 👤 &nbsp; Profil ma’lumotlari
 </button>
 
-<button onclick="toast('Sozlamalar tez orada qo‘shiladi ⚙️')">
+<button onclick="toast('Sozlamalar keyingi versiyada.')">
 ⚙️ &nbsp; Sozlamalar
 </button>
 
@@ -1216,46 +1260,35 @@ SuhbatAI hisobingiz.
 
 </section>
 
+
 <nav class="navbar">
 
-<button class="nav active"
-onclick="showPage('home',this)">
-
+<button class="nav active" onclick="showPage('home',this)">
 <span>⌂</span>
 <small>Bosh sahifa</small>
-
 </button>
 
-<button class="nav"
-onclick="showPage('chats',this)">
-
+<button class="nav" onclick="showPage('chats',this)">
 <span>◉</span>
 <small>Suhbatlar</small>
-
 </button>
 
-<button class="add"
-onclick="openChat('Yangi suhbat','🤖')">
+<button class="add" onclick="openChat('Yangi suhbat','🤖')">
 ＋
 </button>
 
-<button class="nav"
-onclick="showPage('saved',this)">
-
+<button class="nav" onclick="showPage('saved',this)">
 <span>☆</span>
 <small>Saqlangan</small>
-
 </button>
 
-<button class="nav"
-onclick="showPage('profile',this)">
-
+<button class="nav" onclick="showPage('profile',this)">
 <span>♙</span>
 <small>Profil</small>
-
 </button>
 
 </nav>
+
 
 <div class="modal" id="proModal">
 
@@ -1296,80 +1329,29 @@ limitsiz foydalaning.
 
 </div>
 
+
 <div class="toast" id="toast"></div>
 
 </div>
 
-<script>
 
-/* ================= SETTINGS ================= */
+<script>
 
 const API_URL =
 "https://suhbatai-backend-1.onrender.com/chat";
 
-const FREE_LIMIT = 5;
-const PRO_DAYS = 15;
-
-/* ================= STATE ================= */
-
 let used = Number(localStorage.getItem("suhbatai_used") || 0);
 
-let proUntil =
-Number(localStorage.getItem("suhbatai_pro_until") || 0);
+let pro = localStorage.getItem("suhbatai_pro") === "true";
 
 let currentChat = "";
 
 let quoteIndex = 0;
 
-
-/* ================= DATE / PRO ================= */
-
-function isPro(){
-
-    return Date.now() < proUntil;
-
-}
-
-function saveState(){
-
-    localStorage.setItem(
-        "suhbatai_used",
-        used
-    );
-
-    localStorage.setItem(
-        "suhbatai_pro_until",
-        proUntil
-    );
-
-}
-
-function updateLimit(){
-
-    if(isPro()){
-
-        document.getElementById("limit")
-        .textContent = "∞";
-
-        document.getElementById("profileStatus")
-        .textContent = "SuhbatAI Pro ⭐";
-
-        return;
-
-    }
-
-    const remaining =
-        Math.max(0,FREE_LIMIT-used);
-
-    document.getElementById("limit")
-    .textContent = remaining;
-
-}
+let chatHistory = [];
 
 updateLimit();
 
-
-/* ================= PAGE ================= */
 
 function showPage(id,button){
 
@@ -1388,456 +1370,344 @@ function showPage(id,button){
     if(button){
         button.classList.add("active");
     }
-
 }
 
 
-/* ================= CHAT ================= */
-
 function openChat(name,emoji){
 
-    if(!isPro() && used>=FREE_LIMIT){
+    if(!pro && used>=5){
 
         openPro();
 
-        toast(
-            "Bugungi 5 ta bepul savolingiz tugadi ⭐"
-        );
+        toast("Bugungi 5 ta savol limitiga yetdingiz ⭐");
 
         return;
-
     }
 
-    currentChat = name;
+    currentChat=name;
 
-    document.getElementById("chatName")
-    .textContent = name;
+    document.getElementById("chatName").textContent=name;
 
-    document.getElementById("chatAvatar")
-    .textContent = emoji;
+    document.getElementById("chatAvatar").textContent=emoji;
 
     document.querySelectorAll(".page")
     .forEach(x=>x.classList.remove("active"));
 
-    document.getElementById("chat")
-    .classList.add("active");
+    document.getElementById("chat").classList.add("active");
 
-    document.getElementById("messages")
-    .innerHTML = "";
+    document.getElementById("messages").innerHTML="";
+
+    chatHistory=[];
 
     addBot(welcome(name));
 
     document.getElementById("input").focus();
-
 }
 
-
-/* ================= WELCOME ================= */
 
 function welcome(name){
 
     if(name==="Kulgu"){
-
-        return "😂 Salom! Kayfiyatni ko‘taramizmi? Hazil, topishmoq yoki qiziqarli suhbat boshlashimiz mumkin.";
-
+        return "😂 Salom! Kayfiyatni ko‘taramizmi? Istalgan mavzuda gaplashamiz.";
     }
 
     if(name==="Maslahatchi"){
-
-        return "💡 Salom! Vaziyatingizni yozing. Men uni tushunishga va foydali yo‘l-yo‘riq berishga harakat qilaman.";
-
+        return "💡 Salom! Vaziyatingizni yozing. Imkon qadar foydali va ehtiyotkor maslahat beraman.";
     }
 
     if(name==="Savol-javob"){
-
-        return "❓ Salom! Savolingizni yozing. Imkon qadar aniq va tushunarli javob beraman.";
-
+        return "❓ Salom! Savolingizni yozing. Men imkon qadar aniq va tushunarli javob beraman.";
     }
 
-    return "😊 Salom! Men bilan bemalol suhbatlashishingiz mumkin. Bugun nimalar haqida gaplashamiz?";
-
+    return "😊 Salom! Men SuhbatAI. Bemalol yozing, suhbatlashamiz.";
 }
 
 
-/* ================= AI SEND ================= */
-
 async function send(){
 
-    const input =
-        document.getElementById("input");
+    const input=document.getElementById("input");
 
-    const text =
-        input.value.trim();
+    const text=input.value.trim();
 
     if(!text){
         return;
     }
 
-    if(!isPro() && used>=FREE_LIMIT){
+    if(!pro && used>=5){
 
         openPro();
 
-        toast(
-            "Limit tugadi. PRO orqali davom etishingiz mumkin ⭐"
-        );
+        toast("Bepul limit tugadi ⭐");
 
         return;
-
     }
 
-    used++;
-
-    saveState();
-
-    updateLimit();
+    input.value="";
 
     addUser(text);
 
-    input.value = "";
+    if(!pro){
 
-    const loading =
-        document.createElement("div");
+        used++;
 
-    loading.className =
-        "message bot";
+        localStorage.setItem(
+            "suhbatai_used",
+            used
+        );
 
-    loading.textContent =
-        "⏳ Javob tayyorlanmoqda...";
+        updateLimit();
+    }
 
-    document.getElementById("messages")
-        .appendChild(loading);
+    const loading=document.createElement("div");
 
-    const box =
-        document.getElementById("messages");
+    loading.className="message bot";
 
-    box.scrollTop = box.scrollHeight;
+    loading.id="loadingMessage";
 
+    loading.innerHTML=`
+        <div class="loading">
+            <span>AI yozmoqda</span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    `;
+
+    const box=document.getElementById("messages");
+
+    box.appendChild(loading);
+
+    box.scrollTop=box.scrollHeight;
 
     try{
 
-        const response =
-            await fetch(
-                API_URL,
-                {
-                    method:"POST",
+        const response=await fetch(API_URL,{
 
-                    headers:{
-                        "Content-Type":
-                        "application/json"
-                    },
+            method:"POST",
 
-                    body:JSON.stringify({
+            headers:{
+                "Content-Type":"application/json"
+            },
 
-                        message:
-                            buildPrompt(
-                                currentChat,
-                                text
-                            )
+            body:JSON.stringify({
+                message:
+                `Suhbat turi: ${currentChat}
 
-                    })
-                }
-            );
+Foydalanuvchi:
+${text}`
+            })
 
+        });
 
-        const data =
-            await response.json();
+        let data;
 
-
-        loading.remove();
-
-
-        if(data.answer){
-
-            addBot(data.answer);
-
-        }else{
-
-            addBot(
-                "Kechirasiz, hozircha javob olishning iloji bo‘lmadi. 😕"
-            );
-
+        try{
+            data=await response.json();
+        }catch{
+            data={};
         }
 
+        document.getElementById("loadingMessage")?.remove();
+
+        if(!response.ok){
+
+            throw new Error(
+                data.error ||
+                "Server javobida xatolik yuz berdi."
+            );
+        }
+
+        if(!data.answer){
+
+            throw new Error(
+                "AI javobi kelmadi."
+            );
+        }
+
+        addBot(data.answer);
 
     }catch(error){
 
+        document.getElementById("loadingMessage")?.remove();
+
         console.error(error);
 
-        loading.remove();
-
         addBot(
-            "Server bilan bog‘lanishda xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib ko‘ring. 😕"
+            "❌ Server bilan bog‘lanishda xatolik yuz berdi.\n\n" +
+            "Internetni tekshiring yoki birozdan keyin qayta urinib ko‘ring."
         );
 
     }
 
 }
 
-
-/* ================= AI PROMPT ================= */
-
-function buildPrompt(type,text){
-
-    let instruction = "";
-
-    if(type==="Do‘st"){
-
-        instruction =
-        "Sen foydalanuvchining samimiy, muloyim va hurmatli AI do‘stisan. Tabiiy suhbatlash. Foydalanuvchini hukm qilma.";
-
-    }
-
-    else if(type==="Kulgu"){
-
-        instruction =
-        "Sen quvnoq AI suhbatdoshsan. Yengil hazillar, topishmoqlar va qiziqarli suhbatlar qil. Foydalanuvchini masxara qilma.";
-
-    }
-
-    else if(type==="Maslahatchi"){
-
-        instruction =
-        "Sen ehtiyotkor va foydali AI maslahatchisan. Vaziyatni tushunishga yordam ber. Tibbiy, huquqiy yoki xavfli mavzularda mutaxassisga murojaat qilish kerakligini ayt.";
-
-    }
-
-    else if(type==="Savol-javob"){
-
-        instruction =
-        "Sen aniq, tushunarli va foydali savol-javob AI yordamchisisan. Bilmagan narsangni uydirma.";
-
-    }
-
-    else{
-
-        instruction =
-        "Sen SuhbatAI nomli foydali o‘zbekcha AI yordamchisan.";
-
-    }
-
-
-    return `
-${instruction}
-
-Har doim o‘zbek tilida javob ber.
-
-Foydalanuvchi hozirgi mavzu:
-${type}
-
-Foydalanuvchining xabari:
-${text}
-`;
-
-}
-
-
-/* ================= USER MESSAGE ================= */
 
 function addUser(text){
 
-    const box =
-        document.getElementById("messages");
+    const box=document.getElementById("messages");
 
-    const msg =
-        document.createElement("div");
+    const msg=document.createElement("div");
 
-    msg.className =
-        "message user";
+    msg.className="message user";
 
-    msg.textContent = text;
+    msg.textContent=text;
 
     box.appendChild(msg);
 
-    box.scrollTop =
-        box.scrollHeight;
-
+    box.scrollTop=box.scrollHeight;
 }
 
 
-/* ================= BOT MESSAGE ================= */
-
 function addBot(text){
 
-    const box =
-        document.getElementById("messages");
+    const box=document.getElementById("messages");
 
-    const wrapper =
-        document.createElement("div");
+    const wrapper=document.createElement("div");
 
-    const msg =
-        document.createElement("div");
+    const msg=document.createElement("div");
 
-    msg.className =
-        "message bot";
+    msg.className="message bot";
 
-    msg.textContent = text;
+    msg.textContent=text;
 
     wrapper.appendChild(msg);
 
+    const tools=document.createElement("div");
 
-    const tools =
-        document.createElement("div");
+    tools.className="messageTools";
 
-    tools.className =
-        "messageTools";
+    const copy=document.createElement("button");
 
+    copy.textContent="📋 Nusxalash";
 
-    const copy =
-        document.createElement("button");
+    copy.onclick=async()=>{
 
-    copy.textContent =
-        "📋 Nusxalash";
+        try{
 
-    copy.onclick = ()=>{
+            await navigator.clipboard.writeText(text);
 
-        navigator.clipboard
-        ?.writeText(text);
+            toast("Javob nusxalandi 📋");
 
-        toast(
-            "Javob nusxalandi 📋"
-        );
+        }catch{
+
+            toast("Nusxalash amalga oshmadi");
+
+        }
 
     };
 
 
-    const save =
-        document.createElement("button");
+    const save=document.createElement("button");
 
-    save.textContent =
-        "⭐ Saqlash";
+    save.textContent="⭐ Saqlash";
 
-    save.onclick = ()=>{
+    save.onclick=()=>{
+
+        const saved =
+        JSON.parse(
+            localStorage.getItem("suhbatai_saved") || "[]"
+        );
+
+        saved.push({
+            text:text,
+            date:new Date().toISOString()
+        });
 
         localStorage.setItem(
             "suhbatai_saved",
-            text
+            JSON.stringify(saved)
         );
 
-        toast(
-            "Javob saqlandi ⭐"
-        );
+        toast("Javob saqlandi ⭐");
 
     };
 
 
     tools.appendChild(copy);
+
     tools.appendChild(save);
 
     wrapper.appendChild(tools);
 
     box.appendChild(wrapper);
 
-    box.scrollTop =
-        box.scrollHeight;
-
+    box.scrollTop=box.scrollHeight;
 }
 
 
-/* ================= CLEAR ================= */
+function updateLimit(){
+
+    const remaining=
+        pro ? "∞" : Math.max(0,5-used);
+
+    document.getElementById("limit")
+    .textContent=remaining;
+}
+
 
 function clearChat(){
 
-    if(!confirm(
-        "Ushbu suhbatni tozalaysizmi?"
-    )){
+    if(!confirm("Ushbu suhbatni tozalaysizmi?")){
         return;
     }
 
     document.getElementById("messages")
-        .innerHTML="";
+    .innerHTML="";
 
-    addBot(
-        welcome(currentChat)
-    );
+    chatHistory=[];
 
-    toast(
-        "Suhbat tozalandi 🗑"
-    );
+    addBot(welcome(currentChat));
 
+    toast("Suhbat tozalandi 🗑");
 }
 
-
-/* ================= HOME ================= */
 
 function goHome(){
 
     document.getElementById("chat")
-        .classList.remove("active");
+    .classList.remove("active");
 
     document.getElementById("home")
-        .classList.add("active");
+    .classList.add("active");
 
     document.querySelectorAll(".nav")
-        .forEach(x=>x.classList.remove("active"));
+    .forEach(x=>x.classList.remove("active"));
 
     document.querySelector(".nav")
-        .classList.add("active");
-
+    .classList.add("active");
 }
 
-
-/* ================= PRO ================= */
 
 function openPro(){
 
     document.getElementById("proModal")
-        .classList.add("show");
-
+    .classList.add("show");
 }
+
 
 function closePro(){
 
     document.getElementById("proModal")
-        .classList.remove("show");
-
+    .classList.remove("show");
 }
 
-
-/* ================= PAYMENT ================= */
 
 function payment(method){
 
     closePro();
 
-    if(method==="Click"){
-
-        toast(
-            "Click to‘lovi hozircha test rejimida. 💳"
-        );
-
-        return;
-
-    }
-
-    if(method==="Payme"){
-
-        toast(
-            "Payme to‘lovi hozircha test rejimida. 💳"
-        );
-
-        return;
-
-    }
-
     toast(
-        "To‘lov tizimi tez orada ulanadi. 💳"
+        method+
+        " to‘lovi keyingi bosqichda ulanadi 💳"
     );
-
 }
 
-
-/* ================= NOTIFY ================= */
 
 function notify(){
 
-    toast(
-        "Hozircha yangi bildirishnoma yo‘q 🔔"
-    );
-
+    toast("Hozircha yangi bildirishnoma yo‘q 🔔");
 }
 
-
-/* ================= QUOTES ================= */
 
 const quotes=[
 
@@ -1851,78 +1721,59 @@ const quotes=[
 
 ];
 
+
 function changeQuote(){
 
     quoteIndex++;
 
-    if(
-        quoteIndex>=quotes.length
-    ){
-
+    if(quoteIndex>=quotes.length){
         quoteIndex=0;
-
     }
 
     document.getElementById("quote")
-    .textContent =
+    .textContent=
     "“"+quotes[quoteIndex]+"”";
-
 }
 
-
-/* ================= TOAST ================= */
 
 let toastTimer;
 
 function toast(text){
 
-    const box =
-        document.getElementById("toast");
+    const box=document.getElementById("toast");
 
-    box.textContent = text;
+    box.textContent=text;
 
     box.classList.add("show");
 
     clearTimeout(toastTimer);
 
-    toastTimer =
-        setTimeout(()=>{
+    toastTimer=setTimeout(()=>{
 
-            box.classList.remove("show");
+        box.classList.remove("show");
 
-        },2500);
-
+    },2500);
 }
 
 
-/* ================= ENTER ================= */
-
 document.getElementById("input")
-.addEventListener(
-    "keydown",
-    function(e){
+.addEventListener("keydown",function(e){
 
-        if(e.key==="Enter"){
-            send();
-        }
-
+    if(e.key==="Enter"){
+        send();
     }
-);
 
+});
 
-/* ================= MODAL ================= */
 
 document.getElementById("proModal")
-.addEventListener(
-    "click",
-    function(e){
+.addEventListener("click",function(e){
 
-        if(e.target===this){
-            closePro();
-        }
-
+    if(e.target===this){
+        closePro();
     }
-);
+
+});
 
 </script>
 
